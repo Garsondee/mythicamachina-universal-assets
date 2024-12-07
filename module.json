@@ -1,51 +1,61 @@
 {
-  "id": "module",
-  "title": "New Module",
-  "description": "",
-  "version": "#{VERSION}#",
-  "library": "false",
-  "manifestPlusVersion": "1.2.0",
+  "id": "mythicamachina-campsites",
+  "name": "mythicamachina-campsites",
+  "title": "Mythica Machina Campsite",
+  "description": "A map pack containing 6 maps designed for campsites.",
+  "version": "1.0.0",
+  "minimumCoreVersion": "11",
+  "compatibleCoreVersion": "12",
   "compatibility": {
-    "minimum": 10,
-    "verified": 10,
-    "maximum": 11
+    "minimum": "11",
+    "verified": "12"
   },
+  "author": "Ingram Blakelock",
   "authors": [
     {
-      "name": "The League of Extraordinary FVTT Developers",
-      "url": "https://github.com/League-of-Foundry-Developers",
-      "discord": "discordID#0001"
+      "name": "Ingram Blakelock"
+    }
+  ],
+  "packs": [
+    {
+      "name": "maps",
+      "label": "Mythica Machina Campsite",
+      "path": "/packs/maps.db",
+      "entity": "Scene",
+      "type": "Scene"
+    }
+  ],
+  "esmodules": [
+    "./scripts/init.js"
+  ],
+  "dependencies": [
+    {
+      "name": "scene-packer",
+      "manifest": "https://github.com/League-of-Foundry-Developers/scene-packer/releases/latest/download/module.json",
+      "type": "module"
+    },
+    {
+      "name": "mythicamachina-universal-assets",
+      "manifest": "https://github.com/Garsondee/mythicamachina-universal-assets/releases/latest/download/module.json",
+      "type": "module"
     }
   ],
   "relationships": {
-    "systems": [],
-    "requires": []
+    "requires": [
+      {
+        "id": "scene-packer",
+        "type": "module",
+        "manifest": "https://github.com/League-of-Foundry-Developers/scene-packer/releases/latest/download/module.json"
+      },
+      {
+        "id": "mythicamachina-universal-assets",
+        "type": "module",
+        "manifest": "https://github.com/Garsondee/mythicamachina-universal-assets/releases/latest/download/module.json"
+      }
+    ]
   },
-  "esmodules": [
-    "scripts/module.js"
-  ],
-  "scripts": [
-    "scripts/lib/lib.js"
-  ],
-  "styles": [
-    "styles/module.css"
-  ],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "languages/en.json"
-    }
-  ],
-  "url": "#{URL}#",
-  "manifest": "#{MANIFEST}#",
-  "download": "#{DOWNLOAD}#",
-  "license": "LICENSE",
-  "readme": "README.md",
-  "media": [
-    {
-      "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
-    }
-  ]
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "manifestPlusVersion": "1.2.0"
 }
